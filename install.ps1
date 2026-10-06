@@ -9,7 +9,7 @@ Write-Host "==> Memasang modul Antigravity ke $dest..." -ForegroundColor Cyan
 New-Item -ItemType Directory -Force -Path "$dest\plugins" | Out-Null
 New-Item -ItemType Directory -Force -Path "$dest\skills" | Out-Null
 
-$scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path 2>$null
+$scriptDir = if ($MyInvocation.MyCommand.Path) { Split-Path -Parent $MyInvocation.MyCommand.Path } else { $null }
 
 if ($scriptDir -and (Test-Path "$scriptDir\plugins") -and (Test-Path "$scriptDir\skills")) {
     Copy-Item -Path "$scriptDir\plugins\*" -Destination "$dest\plugins" -Recurse -Force
