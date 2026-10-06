@@ -19,18 +19,18 @@ Kumpulan plugin, skill, dan aturan global (*guardrails*) untuk Antigravity CLI.
 
 ## Cara Pasang di Komputer Baru (1-Liner)
 
-Jalankan perintah ini di terminal komputer mana saja (tidak butuh git clone atau SSH key):
+### Windows (PowerShell)
+Buka **PowerShell** lalu jalankan:
+
+```powershell
+irm https://raw.githubusercontent.com/De-violet/antigravity-customizations/main/install.ps1 | iex
+```
+
+### Linux / macOS (Bash)
+Buka **Terminal** lalu jalankan:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/De-violet/antigravity-customizations/main/install.sh | bash
-```
-
-### Opsi Alternatif (Git Clone)
-
-```bash
-git clone https://github.com/De-violet/antigravity-customizations.git ~/antigravity-customizations
-cd ~/antigravity-customizations
-./install.sh
 ```
 
 ---
@@ -38,13 +38,7 @@ cd ~/antigravity-customizations
 ## Lokasi Instalasi
 
 File otomatis disalin ke direktori konfigurasi global Antigravity:
-```text
-~/.gemini/config/
-├── plugins/
-│   ├── no-ai-slop/
-│   └── ponytail/
-└── skills/
-    ├── orchestrated-task-manager/
-    └── task-manager/
-```
-Modul langsung aktif saat perintah `agy` dijalankan.
+- **Windows:** `%USERPROFILE%\.gemini\config\` (`C:\Users\<username>\.gemini\config\`)
+- **Linux:** `~/.gemini/config/`
+
+Modul langsung aktif saat perintah `agy` dijalankan di terminal mana pun.
