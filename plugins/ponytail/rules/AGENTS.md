@@ -1,0 +1,1 @@
+/home/deviolete/.gemini/config/plugins/ponytail/AGENTS.md

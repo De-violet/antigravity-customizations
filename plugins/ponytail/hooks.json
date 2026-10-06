@@ -1,0 +1,21 @@
+{
+  "ponytail-pre-execution": {
+    "PreInvocation": [
+      {
+        "type": "command",
+        "command": "node /home/deviolete/.gemini/config/plugins/ponytail/hooks/ponytail-pre-invocation.js"
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "run_command|view_file",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node /home/deviolete/.gemini/config/plugins/ponytail/hooks/ponytail-pre-tool.js"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "name": "no-ai-slop",
+  "version": "1.0.0",
+  "description": "Global writing guardrail removing AI slop patterns and enforcing direct, concise, and authentic human communication."
+}
