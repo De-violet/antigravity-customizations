@@ -1,6 +1,6 @@
 # Antigravity CLI Customizations
 
-Kumpulan plugin, skill, dan aturan global (*guardrails*) untuk [Antigravity CLI](https://github.com/google-deepmind/antigravity).
+Kumpulan plugin, skill, dan aturan global (*guardrails*) untuk Antigravity CLI.
 
 ---
 
@@ -9,7 +9,7 @@ Kumpulan plugin, skill, dan aturan global (*guardrails*) untuk [Antigravity CLI]
 ### Plugins (`plugins/`)
 - **`no-ai-slop`**: Menghilangkan basa-basi pembuka/penutup, klise generik AI, dan memaksa respons langsung ke inti teknis.
 - **`ponytail`**: *Lazy senior dev mode* — prinsip YAGNI, anti-overengineering, minim dependensi, dan mengutamakan diff terkecil yang bekerja.
-  - Perintah bawaan: `/ponytail`, `/ponytail-audit`, `/ponytail-review`, `/ponytail-debt`, `/ponytail-gain`, `/ponytail-help`.
+  - Perintah: `/ponytail`, `/ponytail-audit`, `/ponytail-review`, `/ponytail-debt`, `/ponytail-gain`, `/ponytail-help`.
 
 ### Skills (`skills/`)
 - **`task-manager`**: Manajemen status dan memori lokal proyek (`update_state.py`) secara persisten per workspace.
@@ -17,32 +17,27 @@ Kumpulan plugin, skill, dan aturan global (*guardrails*) untuk [Antigravity CLI]
 
 ---
 
-## Cara Pasang di Komputer Baru
+## Cara Pasang di Komputer Baru (1-Liner)
 
-Pastikan Antigravity CLI (`agy`) sudah terpasang di komputer target, lalu jalankan:
+Jalankan perintah ini di terminal komputer mana saja (tidak butuh git clone atau SSH key):
 
-### Opsi 1: Satu Baris Perintah (SSH)
 ```bash
-git clone git@github.com:De-violet/antigravity-customizations.git /tmp/agy-mods && \
-/tmp/agy-mods/install.sh && \
-rm -rf /tmp/agy-mods
+curl -fsSL https://raw.githubusercontent.com/De-violet/antigravity-customizations/main/install.sh | bash
 ```
 
-### Opsi 2: Manual
-```bash
-# 1. Clone repository
-git clone git@github.com:De-violet/antigravity-customizations.git ~/antigravity-customizations
+### Opsi Alternatif (Git Clone)
 
-# 2. Masuk dan jalankan installer
+```bash
+git clone https://github.com/De-violet/antigravity-customizations.git ~/antigravity-customizations
 cd ~/antigravity-customizations
 ./install.sh
 ```
 
 ---
 
-## Struktur Direktori Tujuan
+## Lokasi Instalasi
 
-Setelah diinstal, file akan disalin ke direktori konfigurasi global Antigravity:
+File otomatis disalin ke direktori konfigurasi global Antigravity:
 ```text
 ~/.gemini/config/
 ├── plugins/
@@ -52,4 +47,4 @@ Setelah diinstal, file akan disalin ke direktori konfigurasi global Antigravity:
     ├── orchestrated-task-manager/
     └── task-manager/
 ```
-Plugin dan skill akan langsung aktif saat perintah `agy` dijalankan tanpa perlu konfigurasi tambahan.
+Modul langsung aktif saat perintah `agy` dijalankan.
