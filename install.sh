@@ -9,7 +9,7 @@ echo "==> Memasang modul Antigravity ke ${DEST}..."
 mkdir -p "${DEST}/plugins" "${DEST}/skills"
 
 # Deteksi apakah script dijalankan lokal atau dipipe melalui curl/wget | bash
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" 2>/dev/null && pwd || true)"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]:-}")" 2>/dev/null && pwd || true)"
 
 if [ -n "$SCRIPT_DIR" ] && [ -d "${SCRIPT_DIR}/plugins" ] && [ -d "${SCRIPT_DIR}/skills" ]; then
   # Dijalankan dari direktori clone lokal
